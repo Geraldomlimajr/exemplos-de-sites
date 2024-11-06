@@ -5,13 +5,16 @@ const CompletedList=document.querySelector(".task-list")
 let myList=[]
 //Função que pega o valor no input
 function addTasks(){
+    if(inputTask.value==""){
+        alert("Digite o que deve fazer...")
+    }else{
    myList.push({task: inputTask.value,
                 completed:false})
     console.log(myList)
     showTasks()
     inputTask.value=""
 
-}
+}}
 
 function showTasks(){
 
